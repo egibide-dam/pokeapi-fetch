@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="h-100">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width"/>
@@ -17,11 +17,11 @@
         }
     </style>
 </head>
-<body class="container p-5">
+<body class="container-fluid d-flex flex-column h-100">
 
 <div class="row p-4 bg-warning">
-    <h1 class="col-6">Ejemplo PokéAPI</h1>
-    <div class="col-6 d-flex justify-content-end align-items-center">
+    <h1 class="col-12 col-sm-6">Ejemplo PokéAPI</h1>
+    <div class="col-12 col-sm-6 d-flex justify-content-end align-items-center">
         <span class="me-2">ポケモン ID:</span>
         <button title="Anterior"
                 id="boton_menos"
@@ -37,18 +37,19 @@
     </div>
 </div>
 
-<h2 id="pokemon_name" class="text-capitalize mt-4"></h2>
-<div class="table-responsive mt-4">
-    <table class="table table-hover">
-        <tbody id="pokemon_data" class="align-middle">
-        </tbody>
-    </table>
-</div>
+<main class="p-4">
+    <h2 id="pokemon_name" class="display-2 text-capitalize"></h2>
+    <div class="table-responsive mt-4">
+        <table class="table table-hover border">
+            <tbody id="pokemon_data" class="align-middle">
+            </tbody>
+        </table>
+    </div>
+    <p id="error" class="d-none alert alert-danger" role="alert"></p>
+</main>
 
-<p id="error" class="d-none alert alert-danger" role="alert"></p>
-
-<footer class="footer mt-5 py-3 bg-secondary-subtle">
-    <div class="container text-center">
+<footer class="row footer mt-auto py-4 bg-secondary-subtle">
+    <div class="col text-center">
         <span class="text-secondary">
             <i class="bi bi-github me-2"></i>
             <a class="link link-secondary small link-underline-opacity-0 link-underline-opacity-100-hover"
